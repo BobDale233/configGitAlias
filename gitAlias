@@ -1,0 +1,26 @@
+[alias]
+cl = clone
+st = status
+co = checkout
+ci = commit
+br = branch
+pl = pull --rebase
+ps = push
+rbc = rebase --continue
+rba = rebase --abort
+ft = fetch --prune origin
+undo = reset HEAD
+mg = merge --no-ff
+lgls = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --stat
+lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+des = log --color --pretty=format:'%s' --abbrev-commit
+last = log -1 HEAD
+rv = remote -v
+
+sm = submodule
+smst = submodule status
+smup = submodule update
+
+
+bd = rev-list --count HEAD
+ver = !sh -c 'git rev-list --reverse HEAD | nl | awk \"{ if(\\$1 == "$0") { print \\$2 }}\"'
